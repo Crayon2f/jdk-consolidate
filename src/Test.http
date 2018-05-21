@@ -1,0 +1,46 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://dl.stream.qqmusic.qq.com/C400000tpwCe3IzGyi.m4a?vkey=519EFFACDD3A82C6C20FAFF8C3AF2490D90C29D70998FE04E7BD1969136979703B2A29532564F44E485DC93B8575BCDF058BDB98DE6B8230&guid=833758594&uin=0
+###
+
+POST http://www.58art.com/sysUser/login
+ptr
+
+###
+
+GET http://www.58art.com/sysUser/logout
+
+###
+
+POST http://localhost:8080/main/post
+Content-Type: application/json
+#Content-Type: application/x-www-form-urlencoded
+
+//age=999&name=content
+{
+    "name":"jack",
+    "age":90
+}
+###
+#POST http://localhost:8080/fanneng-inteop-opteratingback/alarm/selectUnConfirmAlarm?pageSize=10&pageNo=1
+POST http://operation-back-api-fnw-dev.topaas.enncloud.cn/fanneng-inteop-opteratingback/alarm/selectUnConfirmAlarm?pageSize=10&pageNo=1
+#POST http://operation-back-consumer-fnw-test.topaas.enncloud.cn/fanneng-inteop-opteratingback/alarm/selectUnConfirmAlarm?pageSize=10&pageNo=1
+Content-Type: application/json
+
+{
+  "alarmLevel": null,
+  "alarmSource": 1501,
+  "alarmStatus": null,
+  "alarmType": null,
+  "equipmentType": "",
+  "lastUpdate": null,
+  "stationId": "",
+  "tendency": null
+}
+###
+
