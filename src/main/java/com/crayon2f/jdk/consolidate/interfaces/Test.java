@@ -5,7 +5,5 @@ package com.crayon2f.jdk.consolidate.interfaces;
  */
 public interface Test {
 
-    default void print() {
 
-    }
 }
