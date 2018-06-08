@@ -1,6 +1,8 @@
 package com.crayon2f.jdk.consolidate;
 
 import com.crayon2f.jdk.consolidate.pojo.Article;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import org.junit.Test;
@@ -19,11 +21,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.ZoneId;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 /**
  * Created by feiFan.gou on 2018/1/6 17:38.
@@ -122,5 +127,17 @@ public class Main {
         System.out.println((1 << 20) * (5 << 2));
     }
 
+
+    @Test
+    public void test3() {
+
+        System.out.println(ZoneId.systemDefault());
+
+        Function<String, Integer> fn = Integer::parseInt;
+
+        Map<String, Integer> map = Maps.asMap(Sets.newHashSet("iii"), value -> 3);
+
+        System.out.println(map);
+    }
 
 }

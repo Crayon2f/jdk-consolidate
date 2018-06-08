@@ -14,7 +14,7 @@ import java.time.LocalDate;
 /**
  * Created by feiFan.gou on 2018/5/7 17:02.
  */
-@Slf4j
+//@Slf4j
 public class LombokTest {
 
     @Test
@@ -28,7 +28,6 @@ public class LombokTest {
     public void val() {
 
         val string = "99"; // this is a final variables
-
         System.out.println(string);
     }
 
