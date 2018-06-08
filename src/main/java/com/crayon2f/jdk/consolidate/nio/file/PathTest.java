@@ -2,18 +2,12 @@ package com.crayon2f.jdk.consolidate.nio.file;
 
 import org.junit.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
 /**
  * Created by feiFan.gou on 2018/2/7 17:59.
  */
@@ -40,13 +34,5 @@ public class PathTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @Test
-    public void test2() {
-
-        System.out.println(new Date(1520408008204L));
-        System.out.println(Instant.ofEpochMilli(1520408008204L));
-
     }
 }

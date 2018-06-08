@@ -23,4 +23,25 @@ public final class FinalClass {
     public void setSize(Integer size) {
         this.size = size;
     }
+
+    public FinalClass(String name, Integer size) {
+        this.name = name;
+        this.size = size;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj instanceof FinalClass) {
+            FinalClass clazz = (FinalClass) obj;
+            return clazz.getName().equals(this.name);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return this.getSize();
+    }
 }

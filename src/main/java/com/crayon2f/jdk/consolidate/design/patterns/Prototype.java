@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.design.patterns;
 import lombok.Data;
 import org.junit.Test;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 /**
  * Created by feiFan.gou on 2018/2/13 15:42.
@@ -25,7 +25,7 @@ public class Prototype {
 abstract class Person {
     private String name;
     private Integer age;
-    private LocalDate birthday;
+    private Date birthday;
 
     @Override
     protected Object clone() {
