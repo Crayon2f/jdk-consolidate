@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.base;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
@@ -10,10 +10,10 @@ import java.io.*;
  * 专业术语 : try-with-resources statement
  * 前提：资源必须实现 java.lang.AutoCloseable
  */
-public class TryWithResources {
+class TryWithResources {
 
     @Test
-    public void test() {
+    void test() {
 
         try (
                 BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\feifan.gou\\Desktop\\path.txt"));

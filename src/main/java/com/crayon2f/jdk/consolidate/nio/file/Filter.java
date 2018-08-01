@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by feiFan.gou on 2018/5/8 16:05.
  */
-public class Filter {
+class Filter {
 
     public static void main(String[] args) {
 

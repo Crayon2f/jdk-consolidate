@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.juc.container;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 import java.util.NavigableSet;
@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentSkipListMap;
 /**
  * Created by feiFan.gou on 2018/5/17 11:12.
  */
-public class ConcurrentSkipListMapTest {
+class ConcurrentSkipListMapTest {
 
     private ConcurrentSkipListMap<String, String> skipListMap = new ConcurrentSkipListMap<String, String>(){{
         put("a", "1");
@@ -26,7 +26,7 @@ public class ConcurrentSkipListMapTest {
      * 返回大于或等于(有等于的优先显示等于儿)key 的最小key/entry，也就是离key右边最近的一个key/entry，如果没有，就返回null,
      */
     @Test
-    public void ceiling(){
+    void ceiling(){
 
         Map.Entry<String, String> entry = skipListMap.ceilingEntry("f");
 //        System.out.printf("ceiling entry ==> key = %s, value = %s", entry.getKey(), entry.getValue());
@@ -40,7 +40,7 @@ public class ConcurrentSkipListMapTest {
      * 小于
      */
     @Test
-    public void lower() {
+    void lower() {
 
         Map.Entry<String, String> entry = skipListMap.lowerEntry("1");
         System.out.printf("lower entry ==> %s\r\n", entry);
@@ -52,7 +52,7 @@ public class ConcurrentSkipListMapTest {
      * 小于等于
      */
     @Test
-    public void floor() {
+    void floor() {
 
         Map.Entry<String, String> entry = skipListMap.floorEntry("b");
         System.out.printf("floor entry ==> %s\r\n", entry);
@@ -64,7 +64,7 @@ public class ConcurrentSkipListMapTest {
      * 大于
      */
     @Test
-    public void higher() {
+    void higher() {
 
         Map.Entry<String, String> entry = skipListMap.higherEntry("b");
         System.out.printf("higher entry ==> %s\r\n", entry);
@@ -76,7 +76,7 @@ public class ConcurrentSkipListMapTest {
      * 第一个元素
      */
     @Test
-    public void first() {
+    void first() {
 
         Map.Entry<String, String> entry = skipListMap.firstEntry();
         System.out.printf("first entry ==> { key = %s, value = %s}", entry.getKey(), entry.getValue());
@@ -92,7 +92,7 @@ public class ConcurrentSkipListMapTest {
      * 最后一个
      */
     @Test
-    public void last() {
+    void last() {
 
         Map.Entry<String, String> entry = skipListMap.lastEntry();
         System.out.printf("last entry ==> { key = %s, value = %s}", entry.getKey(), entry.getValue());
@@ -107,7 +107,7 @@ public class ConcurrentSkipListMapTest {
      * 移除首个/最后一个，并将其返回；map为空时，不会报错
      */
     @Test
-    public void poll() {
+    void poll() {
 
         Map.Entry<String, String> pollFirstEntry = skipListMap.pollFirstEntry();
         System.out.printf("poll first entry ==> %s", pollFirstEntry);
@@ -125,7 +125,7 @@ public class ConcurrentSkipListMapTest {
      * 翻转
      */
     @Test
-    public void descending() {
+    void descending() {
 
         ConcurrentNavigableMap<String, String> navigableMap = skipListMap.descendingMap();
         System.out.println(navigableMap);
@@ -137,7 +137,7 @@ public class ConcurrentSkipListMapTest {
      * x不存在时，最前：{}， 最后：{all}， 中间：{min - x}（inclusive 填不填结果一致）
      */
     @Test
-    public void head() {
+    void head() {
 
         ConcurrentNavigableMap<String, String> headMap = skipListMap.headMap("e");
         System.out.println(headMap);
@@ -150,7 +150,7 @@ public class ConcurrentSkipListMapTest {
      * 截取 位置控制很友好
      */
     @Test
-    public void sub() {
+    void sub() {
 
         ConcurrentNavigableMap<String, String> subMap = skipListMap.subMap("a", "e");
         System.out.println(subMap);
@@ -162,14 +162,14 @@ public class ConcurrentSkipListMapTest {
      * 尾部,用法同headMap
      */
     @Test
-    public void tail() {
+    void tail() {
 
         ConcurrentNavigableMap<String, String> tailMap = skipListMap.tailMap("e");
         System.out.println(tailMap);
     }
 
     @Test
-    public void navigable() {
+    void navigable() {
 
         NavigableSet<String> navigableSet = skipListMap.navigableKeySet();
         System.out.println(navigableSet);

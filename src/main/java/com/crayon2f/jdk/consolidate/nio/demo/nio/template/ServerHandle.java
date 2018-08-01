@@ -15,7 +15,7 @@ import java.util.Set;
  * @author yangtao__anxpp.com 
  * @version 1.0 
  */  
-public class ServerHandle implements Runnable{  
+class ServerHandle implements Runnable{
     private Selector selector;  
     private ServerSocketChannel serverChannel;  
     private volatile boolean started;  
@@ -43,11 +43,11 @@ public class ServerHandle implements Runnable{
             System.exit(1);  
         }  
     }  
-    public void stop(){  
+    public void stop(){
         started = false;  
     }  
     @Override  
-    public void run() {  
+    public void run() {
         //循环遍历selector  
         while(started){  
             try{  

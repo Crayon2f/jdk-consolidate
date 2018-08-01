@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.nio.buffer;
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.SneakyThrows;
 import lombok.val;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -15,10 +15,10 @@ import java.util.Arrays;
 /**
  * Created by feiFan.gou on 2018/5/9 13:33.
  */
-public class BufferTest extends Base {
+class BufferTest extends Base {
 
     @Test
-    public void intBuffer() {
+    void intBuffer() {
 
         IntBuffer intBuffer = IntBuffer.allocate(15);
         for (int i = 0; i < 11; i++) {
@@ -32,7 +32,7 @@ public class BufferTest extends Base {
     }
 
     @Test
-    public void buffer() {
+    void buffer() {
 
         IntBuffer buffer = IntBuffer.allocate(10);
         System.out.printf("capacity ==> %d", buffer.capacity());
@@ -57,7 +57,7 @@ public class BufferTest extends Base {
     };
 
     @Test
-    public void test() {
+    void test() {
 
         CharBuffer buffer = CharBuffer.allocate(128);
         while (fill(buffer)) {
@@ -97,7 +97,7 @@ public class BufferTest extends Base {
      * 并使缓冲区对重新填充容量准备就绪。
      */
     @Test
-    public void compat() {
+    void compat() {
 
         IntBuffer buffer = IntBuffer.allocate(100);
         for (int i = 0; i < 10; i++) {
@@ -113,7 +113,7 @@ public class BufferTest extends Base {
     }
 
     @Test
-    public void batchMove() {
+    void batchMove() {
 
         CharBuffer buffer = CharBuffer.allocate(1024);
         for (String string : strings) {
@@ -128,7 +128,7 @@ public class BufferTest extends Base {
     }
 
     @Test
-    public void init() {
+    void init() {
 
         val ints = new int[30];
         for (int i = 0, length = ints.length; i < length; i++) {
@@ -161,7 +161,7 @@ public class BufferTest extends Base {
     }
 
     @Test
-    public void duplicate() {
+    void duplicate() {
 
         CharBuffer buffer = CharBuffer.allocate(10);
         buffer.put("1234567890");
@@ -173,7 +173,7 @@ public class BufferTest extends Base {
     }
 
     @Test
-    public void asReadOnlyBuffer() {
+    void asReadOnlyBuffer() {
 
         int[] ints = {1, 2, 3, 4, 5, 6};
         IntBuffer buffer = IntBuffer.wrap(ints);
@@ -200,7 +200,7 @@ public class BufferTest extends Base {
 
     @Test
     @SneakyThrows
-    public void remind() {
+    void remind() {
 
         ByteBuffer buffer = ByteBuffer.allocate(100);
         String string = "this is remind ===========";

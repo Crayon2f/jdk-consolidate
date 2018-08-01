@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.nio.demo.nio.template;
 
-public class Server {
+class Server {
     private static ServerHandle serverHandle;
 
     public static void start() {

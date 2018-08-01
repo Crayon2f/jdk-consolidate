@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * Created by feiFan.gou on 2018/5/17 18:07.
  */
-public class Test {
+class Test {
 
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
 package com.crayon2f.jdk.consolidate.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class RadixSort extends BaseSort {
+class RadixSort extends BaseSort {
 
     private static final int max_radix = 1000;
 
@@ -35,7 +35,7 @@ public class RadixSort extends BaseSort {
     }
 
     @Test
-    public void test() {
+    void test() {
 
         printResult("radix sort");
     }

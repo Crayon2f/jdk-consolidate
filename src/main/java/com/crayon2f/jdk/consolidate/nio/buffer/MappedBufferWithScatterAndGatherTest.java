@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.nio.buffer;
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 /**
  * Created by feiFan.gou on 2018/5/10 20:43.
  */
-public class MappedBufferWithScatterAndGatherTest extends Base {
+class MappedBufferWithScatterAndGatherTest extends Base {
 
     private static final String OUTPUT_FILE = empty_file_path;
     private static final String LINE_SEP = "\r\n";
@@ -80,7 +80,7 @@ public class MappedBufferWithScatterAndGatherTest extends Base {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         @Cleanup
         FileChannel channel = new FileInputStream(file_path).getChannel();

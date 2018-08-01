@@ -2,7 +2,7 @@ package com.crayon2f.jdk.consolidate.nio.file;
 
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -15,7 +15,7 @@ import java.util.Random;
 /**
  * Created by feiFan.gou on 2018/5/10 19:41.
  */
-public class FileLockTest extends Base {
+class FileLockTest extends Base {
 
     private static final int SIZEOF_INT = 4;
     private static final int INDEX_START = 0;
@@ -31,7 +31,7 @@ public class FileLockTest extends Base {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         RandomAccessFile file = new RandomAccessFile(file_path, "rw");
         FileChannel channel = file.getChannel();
@@ -83,7 +83,7 @@ public class FileLockTest extends Base {
     }
 
     @SneakyThrows
-    public void doUpdates(FileChannel channel) {
+    void doUpdates(FileChannel channel) {
 
         while (true) {
             println("trying for exclusive lock...");
@@ -138,7 +138,7 @@ public class FileLockTest extends Base {
 
     @Test
     @SneakyThrows
-    public void test2() {
+    void test2() {
 
         FileLockTest test = new FileLockTest();
         RandomAccessFile file = new RandomAccessFile(file_path, "rw");

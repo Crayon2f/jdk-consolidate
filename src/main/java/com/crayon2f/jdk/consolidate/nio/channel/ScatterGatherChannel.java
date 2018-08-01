@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.nio.channel;
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import com.google.common.collect.Lists;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
@@ -16,11 +16,11 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 /**
  * Created by feiFan.gou on 2018/5/10 15:16.
  */
-public class ScatterGatherChannel extends Base {
+class ScatterGatherChannel extends Base {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         int reps = 10;
         FileOutputStream fos = new FileOutputStream(empty_file_path);

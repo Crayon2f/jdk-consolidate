@@ -6,7 +6,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 倒计时器
  */
-public class CountDownLock implements Runnable {
+class CountDownLock implements Runnable {
 
     static final CountDownLatch latch = new CountDownLatch(10);
     static final CountDownLock lock = new CountDownLock();

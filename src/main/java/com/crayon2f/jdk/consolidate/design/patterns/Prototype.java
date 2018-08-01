@@ -1,17 +1,17 @@
 package com.crayon2f.jdk.consolidate.design.patterns;
 
 import lombok.Data;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
 /**
  * Created by feiFan.gou on 2018/2/13 15:42.
  */
-public class Prototype {
+class Prototype {
 
     @Test
-    public void test() {
+    void test() {
 
         Person student = new Student();
         Person doctor = new Doctor();

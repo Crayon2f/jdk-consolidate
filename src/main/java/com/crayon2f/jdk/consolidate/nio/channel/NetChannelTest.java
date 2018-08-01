@@ -2,7 +2,7 @@ package com.crayon2f.jdk.consolidate.nio.channel;
 
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -17,13 +17,13 @@ import java.util.Optional;
 /**
  * Created by feiFan.gou on 2018/5/11 20:51.
  */
-public class NetChannelTest extends Base {
+class NetChannelTest extends Base {
 
     private static final String greeting = "hello channel !";
 
     @Test
     @SneakyThrows
-    public void serverSocketChannel() {
+    void serverSocketChannel() {
 
         int port = 1234;
 
@@ -56,7 +56,7 @@ public class NetChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void socketChannel() {
+    void socketChannel() {
 
         try (
                 SocketChannel channel = SocketChannel.open(new InetSocketAddress("148.251.188.73", 80));
@@ -78,7 +78,7 @@ public class NetChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void accept() {
+    void accept() {
 
         int port = 1234;
         String greeting = "Hello I must be going.\r\n";
@@ -115,7 +115,7 @@ public class NetChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void newSocket() {
+    void newSocket() {
 
 
         Thread thread = new Thread(() -> {

@@ -2,7 +2,7 @@ package com.crayon2f.jdk.consolidate.nio.file;
 
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,11 +13,11 @@ import java.nio.file.attribute.BasicFileAttributes;
 /**
  * Created by feiFan.gou on 2018/5/8 15:32.
  */
-public class Attributes extends Base {
+class Attributes extends Base {
 
     @Test
     @SneakyThrows
-    public void attributes() {
+    void attributes() {
 
         Path path = Paths.get(file_path);
 //        Path path = Paths.get(dir_path);
@@ -44,7 +44,7 @@ public class Attributes extends Base {
 
     class View {
 
-        public void print() {
+        void print() {
 
             Path path = Paths.get(file_path);
             BasicFileAttributeView view = Files.getFileAttributeView(path, BasicFileAttributeView.class);

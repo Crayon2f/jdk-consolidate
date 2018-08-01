@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * 读写锁
  */
-public class RWLock {
+class RWLock {
 
     private static Lock lock = new ReentrantLock();
     private static ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
@@ -28,7 +28,7 @@ public class RWLock {
         }
     }
 
-    public void handleWrite(Lock lock, int index) throws InterruptedException {
+    void handleWrite(Lock lock, int index) throws InterruptedException {
 
         try {
             lock.lock();
@@ -42,28 +42,22 @@ public class RWLock {
     public static void main(String[] args) throws InterruptedException {
 
         final RWLock rwLock = new RWLock();
-        Runnable readRunnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    rwLock.handleRead(readLock);
+        Runnable readRunnable = () -> {
+            try {
+                rwLock.handleRead(readLock);
 //                    lock.handleRead(lock);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         };
 
-        Runnable writeRunnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    rwLock.handleWrite(writeLock, new Random().nextInt(10));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
+        Runnable writeRunnable = () -> {
+            try {
+                rwLock.handleWrite(writeLock, new Random().nextInt(10));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+
         };
 
         for (int i = 0; i < 18; i++) {

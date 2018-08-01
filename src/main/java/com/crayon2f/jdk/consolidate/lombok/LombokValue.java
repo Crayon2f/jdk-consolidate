@@ -1,4 +1,4 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.AccessLevel;
 import lombok.Value;
@@ -10,7 +10,7 @@ import lombok.experimental.Wither;
  * @value 修饰的类，是final的，且它的属性也是final的
  */
 @Value(staticConstructor = "of")
-public class LombokValue {
+class LombokValue {
 
     @Wither(AccessLevel.PUBLIC)
     private String string;
@@ -27,7 +27,7 @@ public class LombokValue {
 
     }
 
-    public void run() {
+    void run() {
         System.out.println(this.age);
         System.out.print(this.string);
     }

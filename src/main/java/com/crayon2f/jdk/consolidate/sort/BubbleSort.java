@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 原理：比较两个相邻的元素，将值大的元素交换至右端。
@@ -9,10 +9,10 @@ import org.junit.Test;
  然后比较第2个数和第3个数，将小数放前，大数放后，如此继续，直至比较最后两个数，将小数放前，大数放后。重复第一趟步骤，直至全部排序完成。
  */
 
-public class BubbleSort extends BaseSort {
+class BubbleSort extends BaseSort {
 
     @Test
-    public void test() {
+    void test() {
         printResult("bubble sort");
     }
 

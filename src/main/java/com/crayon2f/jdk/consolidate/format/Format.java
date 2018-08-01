@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 
-public class Format {
+class Format {
     private double f = 111231.5585;
 
     private void m1() {

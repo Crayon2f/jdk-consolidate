@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.nio.file;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,10 +11,10 @@ import java.util.List;
 /**
  * Created by feiFan.gou on 2018/2/7 17:59.
  */
-public class PathTest {
+class PathTest {
 
     @Test
-    public void test() throws IOException {
+    void test() throws IOException {
 //        Path path = Paths.get("C:\\Users\\feifan.gou\\Desktop\\path.txt");
 //        System.out.println(path.getFileName());
 //        System.out.println(path.getParent());

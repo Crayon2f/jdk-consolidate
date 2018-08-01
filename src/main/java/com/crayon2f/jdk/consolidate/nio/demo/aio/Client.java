@@ -84,7 +84,7 @@ public class Client extends Base implements CompletionHandler<Void, Client> {
     class WriteHandler implements CompletionHandler<Integer, ByteBuffer> {
 
         @Override
-        public void completed(Integer result, ByteBuffer attachment) {
+       public void completed(Integer result, ByteBuffer attachment) {
 
             //数据全部写入
             if (attachment.hasRemaining()) {

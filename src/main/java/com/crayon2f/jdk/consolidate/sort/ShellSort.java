@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.security.auth.Subject;
 import java.util.ArrayList;
@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ShellSort extends BaseSort {
+class ShellSort extends BaseSort {
 
     @Test
-    public void test() {
+    void test() {
 
         int aa = 127;
         int bb = 256;
@@ -47,7 +47,7 @@ public class ShellSort extends BaseSort {
     }
 
     @Test
-    public void test2() {
+    void test2() {
 
         Map<String, String> map = new HashMap<>();
 
@@ -110,7 +110,7 @@ public class ShellSort extends BaseSort {
         new Thread(runnable2).start();
     }
     @Test
-    public void tt() {
+    void tt() {
 
     }
 }

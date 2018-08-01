@@ -1,9 +1,9 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by feiFan.gou on 2018/5/8 10:56.
@@ -28,7 +28,7 @@ import org.junit.Test;
  *         return this.xName;
  *     }
  *
- *     public void setName(String xName) {
+ *     void setName(String xName) {
  *         this.xName = xName;
  *     }
  *  chain = true：
@@ -40,14 +40,14 @@ import org.junit.Test;
  *
  */
 @Accessors(fluent = true)
-public class LombokAccessors {
+class LombokAccessors {
 
     @Getter
     @Setter
     private long mills;
 
     @Test
-    public void test() {
+    void test() {
         LombokAccessors accessors = new LombokAccessors();
 
         System.out.println(accessors);

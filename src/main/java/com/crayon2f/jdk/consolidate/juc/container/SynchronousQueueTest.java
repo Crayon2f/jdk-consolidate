@@ -1,7 +1,7 @@
 package com.crayon2f.jdk.consolidate.juc.container;
 
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.SynchronousQueue;
@@ -9,13 +9,13 @@ import java.util.concurrent.SynchronousQueue;
 /**
  * Created by feiFan.gou on 2018/5/18 14:50.
  */
-public class SynchronousQueueTest {
+class SynchronousQueueTest {
 
     private SynchronousQueue<String> queue = new SynchronousQueue<>();
     private CountDownLatch latch = new CountDownLatch(1);
 
     @Test
-    public void test() throws InterruptedException {
+    void test() throws InterruptedException {
 
         new Thread(this::provide).start();
         new Thread(this::consumer).start();

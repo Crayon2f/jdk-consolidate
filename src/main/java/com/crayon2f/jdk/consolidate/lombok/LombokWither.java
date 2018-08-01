@@ -1,4 +1,4 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -14,7 +14,7 @@ import lombok.experimental.Wither;
  * }
  */
 
-public class LombokWither {
+class LombokWither {
 
     @Wither(AccessLevel.PROTECTED)
     private String job;

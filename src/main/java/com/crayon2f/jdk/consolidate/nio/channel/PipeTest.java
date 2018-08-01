@@ -1,7 +1,7 @@
 package com.crayon2f.jdk.consolidate.nio.channel;
 
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.PipedInputStream;
@@ -20,7 +20,7 @@ import java.util.Random;
  *
  * @author Ron Hitchens (ron@ronsoft.com)
  */
-public class PipeTest {
+class PipeTest {
 
     public static void main(String[] argv) throws Exception {
         // Wrap a channel around stdout
@@ -98,7 +98,7 @@ public class PipeTest {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         try (
                 PipedOutputStream pos = new PipedOutputStream();

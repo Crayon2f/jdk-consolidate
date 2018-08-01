@@ -1,19 +1,16 @@
 package com.crayon2f.jdk.consolidate;
 
-import com.crayon2f.jdk.consolidate.pojo.Article;
+import com.crayon2f.common.pojo.Article;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.script.ScriptException;
 import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
-import java.nio.Buffer;
-import java.nio.ByteBuffer;
-import java.nio.IntBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
@@ -22,21 +19,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.ZoneId;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 /**
  * Created by feiFan.gou on 2018/1/6 17:38.
  */
-public class Main {
+class Main {
 
     @Test
-    public void main() {
+    void main() {
 
         System.out.println("addSDb".matches("[a-zA-Z]+"));
         System.out.println("我的世界".matches("[\u4E00-\u9FA5]+"));
@@ -80,7 +74,7 @@ public class Main {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         Path path = Paths.get(source);
         @Cleanup
@@ -94,13 +88,13 @@ public class Main {
 
     @Test
     @SneakyThrows
-    public void oldCopy() {
+    void oldCopy() {
 
         Files.copy(Paths.get(source), new FileOutputStream(target));
     }
 
     @Test
-    public void test2() throws ScriptException {
+    void test2() throws ScriptException {
 
         ConcurrentSkipListSet<String> set = new ConcurrentSkipListSet<>();
 //        Set<String> set = Sets.newConcurrentHashSet();
@@ -129,7 +123,7 @@ public class Main {
 
 
     @Test
-    public void test3() {
+    void test3() {
 
         System.out.println(ZoneId.systemDefault());
 

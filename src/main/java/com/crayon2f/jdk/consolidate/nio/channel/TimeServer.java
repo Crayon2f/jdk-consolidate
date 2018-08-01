@@ -22,7 +22,7 @@ import java.net.SocketException;
  *
  * @author Ron Hitchens (ron@ronsoft.com)
  */
-public class TimeServer {
+class TimeServer {
     private static final int DEFAULT_TIME_PORT = 37;
     private static final long DIFF_1900 = 2208988800L;
     protected DatagramChannel channel;

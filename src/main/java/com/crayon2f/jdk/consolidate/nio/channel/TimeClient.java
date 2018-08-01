@@ -34,7 +34,7 @@ import java.util.Iterator;
  *
  * @author Ron Hitchens (ron@ronsoft.com)112
  */
-public class TimeClient {
+class TimeClient {
     private static final int DEFAULT_TIME_PORT = 37;
     private static final long DIFF_1900 = 2208988800L;
     private int port = DEFAULT_TIME_PORT;

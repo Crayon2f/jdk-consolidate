@@ -1,12 +1,10 @@
 package com.crayon2f.jdk.consolidate.lombok;
 
-import com.crayon2f.jdk.consolidate.pojo.lombok.*;
 import lombok.Generated;
 import lombok.SneakyThrows;
 import lombok.Synchronized;
-import lombok.extern.slf4j.Slf4j;
 import lombok.val;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.time.LocalDate;
@@ -15,24 +13,24 @@ import java.time.LocalDate;
  * Created by feiFan.gou on 2018/5/7 17:02.
  */
 //@Slf4j
-public class LombokTest {
+class LombokTest {
 
     @Test
-    public void test() {
+    void test() {
 
         LombokConstructor constructor = LombokConstructor.of("1", 3);
         System.out.println(constructor);
     }
 
     @Test
-    public void val() {
+    void val() {
 
         val string = "99"; // this is a final variables
         System.out.println(string);
     }
 
     @Test
-    public void equalsAndHashCode() {
+    void equalsAndHashCode() {
 
         LombokFromObject object = LombokFromObject.of(12, "6");
         LombokFromObject object2 = LombokFromObject.of(12, "4");
@@ -42,7 +40,7 @@ public class LombokTest {
     }
 
     @Test
-    public void value() {
+    void value() {
 
         LombokValue value = LombokValue.of("test", 45);
         System.out.printf("value = %s", value);
@@ -50,7 +48,7 @@ public class LombokTest {
     }
 
     @Test
-    public void builder() {
+    void builder() {
 
         LombokBuilder builder = LombokBuilder.builder().date(LocalDate.now()).string("string").build();
         System.out.printf("builder => %s", builder);
@@ -58,7 +56,7 @@ public class LombokTest {
 
     @Test
     @SneakyThrows
-    public void sneakyThrows() {
+    void sneakyThrows() {
 
         FileInputStream fis = new FileInputStream(""); // 此处应该throw IOException 的，但是@SneakyThrows 处理了
 
@@ -67,7 +65,7 @@ public class LombokTest {
 
     @Synchronized
     @Test
-    public void synchronizedMethod() {
+    void synchronizedMethod() {
 
         System.out.println("this is a synchronized method "); //编译如下
 
@@ -83,7 +81,7 @@ public class LombokTest {
 
     @Test
     @Generated
-    public void getLazy() {
+    void getLazy() {
 
         LombokGetLazy lazy = new LombokGetLazy();
         System.out.println(lazy.getId());

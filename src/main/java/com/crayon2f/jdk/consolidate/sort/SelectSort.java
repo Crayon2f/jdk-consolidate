@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 原理:
@@ -9,7 +9,7 @@ import org.junit.Test;
 public class SelectSort extends BaseSort {
 
     @Test
-    public void test() {
+    void test() {
 
         printResult("select sort");
 

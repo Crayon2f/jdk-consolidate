@@ -9,47 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <guava.version>23.0</guava.version>
-        <junit.version>4.12</junit.version>
         <jdk.version>1.8</jdk.version>
     </properties>
 
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.17</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
-        <dependency>
-            <groupId>com.belerweb</groupId>
-            <artifactId>pinyin4j</artifactId>
-            <version>2.5.1</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -75,9 +38,11 @@
             <version>2.5.12</version>
         </dependency>
 
-
-
-
+        <dependency>
+            <groupId>com.crayon2f</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -96,5 +61,19 @@
         </plugins>
 
     </build>
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>crayon2f-nexus</name>
+            <url>http://59.110.25.244:9099/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>

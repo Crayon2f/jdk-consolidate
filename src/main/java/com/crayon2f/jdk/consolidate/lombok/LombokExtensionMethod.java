@@ -1,7 +1,7 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.experimental.ExtensionMethod;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
@@ -9,10 +9,10 @@ import java.util.Arrays;
  * Created by feiFan.gou on 2018/5/7 20:55.
  */
 @ExtensionMethod(java.util.Arrays.class)
-public class LombokExtensionMethod {
+class LombokExtensionMethod {
 
     @Test
-    public void test() {
+    void test() {
 
         int[] arr = {3, 5, 2, 5};
 //        arr.sort(); //idea 插件不支持，ε=(´ο｀*)))唉

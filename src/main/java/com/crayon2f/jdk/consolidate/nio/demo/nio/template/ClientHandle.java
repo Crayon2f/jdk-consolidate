@@ -15,7 +15,7 @@ import java.util.Set;
  * @author yangtao__anxpp.com
  * @version 1.0
  */
-public class ClientHandle implements Runnable {
+class ClientHandle implements Runnable {
     private String host;
     private int port;
     private Selector selector;
@@ -39,7 +39,7 @@ public class ClientHandle implements Runnable {
         }
     }
 
-    public void stop() {
+    void stop() {
         started = false;
     }
 
@@ -148,7 +148,7 @@ public class ClientHandle implements Runnable {
         }
     }
 
-    public void sendMsg(String msg) throws Exception {
+    void sendMsg(String msg) throws Exception {
         socketChannel.register(selector, SelectionKey.OP_READ);
         doWrite(socketChannel, msg);
     }

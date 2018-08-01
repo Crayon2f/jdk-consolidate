@@ -1,7 +1,7 @@
 package com.crayon2f.jdk.consolidate.thread.pool;
 
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,11 +9,11 @@ import java.util.concurrent.Executors;
 /**
  * Created by feiFan.gou on 2018/5/8 17:05.
  */
-public class ThreadPoolTest {
+class ThreadPoolTest {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
 //        ExecutorService executor = Executors.newFixedThreadPool(2);
         ExecutorService executor = Executors.newSingleThreadExecutor();

@@ -1,7 +1,5 @@
-package com.crayon2f.jdk.consolidate.pojo;
+package com.crayon2f.jdk.consolidate.base;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -11,7 +9,7 @@ import java.io.Serializable;
  * 不仅此类需要 implements Serializable 其属性类型也需要,否则会抛出 WriteAbortedException: writing aborted;
  */
 @ToString
-public class PojoForSerial implements Serializable {
+class PojoForSerial implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

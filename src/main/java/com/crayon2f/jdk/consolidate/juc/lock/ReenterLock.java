@@ -16,7 +16,7 @@ public class ReenterLock {
         ReentrantLock lock = new ReentrantLock();
         Condition condition = lock.newCondition();
         InnerClass innerClass = new InnerClass();
-        innerClass.main();
+        InnerClass.main();
         try {
             lock.lock();
 //            condition.await();

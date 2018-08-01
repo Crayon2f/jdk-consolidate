@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author yangtao__anxpp.com 
  * @version 1.0 
  */  
-public class Test {  
+class Test {
     //测试主方法  
     @SuppressWarnings("resource")  
     public static void main(String[] args) throws Exception{  

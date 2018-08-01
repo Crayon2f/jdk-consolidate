@@ -1,9 +1,8 @@
 package com.crayon2f.jdk.consolidate.base;
 
-import com.crayon2f.jdk.consolidate.pojo.PojoForSerial;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,11 +12,11 @@ import java.io.ObjectOutputStream;
 /**
  * Created by feiFan.gou on 2018/6/8 16:55.
  */
-public class $Serializable {
+class $Serializable {
 
     @Test
     @SneakyThrows
-    public void serialize() {
+    void serialize() {
 
         PojoForSerial serial = new PojoForSerial("jack", 80);
 
@@ -29,7 +28,7 @@ public class $Serializable {
 
     @Test
     @SneakyThrows
-    public void deserialize() {
+    void deserialize() {
 
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\Lenovo\\Desktop\\serial.txt"));
         PojoForSerial serial = (PojoForSerial) ois.readObject();

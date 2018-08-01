@@ -2,7 +2,7 @@ package com.crayon2f.jdk.consolidate.nio.selector;
 
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.net.InetSocketAddress;
 import java.nio.channels.SelectableChannel;
@@ -15,11 +15,11 @@ import java.util.List;
 /**
  * Created by feiFan.gou on 2018/5/8 16:20.
  */
-public class SelectorTest extends Base {
+class SelectorTest extends Base {
 
     @Test
     @SneakyThrows
-    public void select() {
+    void select() {
 
         Selector selector = Selector.open();
         SelectableChannel channel = SocketChannel.open(new InetSocketAddress("http://jenkov.com", 80));
@@ -28,7 +28,7 @@ public class SelectorTest extends Base {
     }
 
     @Test
-    public void test() {
+    void test() {
 
         Path this_dir = Paths.get(dir_path);
         System.out.println("Now watching the current directory ...");

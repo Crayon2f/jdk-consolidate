@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.nio.buffer;
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,11 +19,11 @@ import java.nio.file.StandardOpenOption;
 /**
  * Created by feiFan.gou on 2018/5/11 13:37.
  */
-public class MappedBufferTest extends Base {
+class MappedBufferTest extends Base {
 
     @Test
     @SneakyThrows
-    public void test() {
+    void test() {
 
         File tempFile = File.createTempFile("mapped", ".txt");
         @Cleanup
@@ -128,7 +128,7 @@ public class MappedBufferTest extends Base {
 
     @Test
     @SneakyThrows
-    public void write() {
+    void write() {
 
         // 为了以可读可写的方式打开文件，这里使用RandomAccessFile来创建文件。
         int length = 0x8000000;
@@ -149,7 +149,7 @@ public class MappedBufferTest extends Base {
 
     @Test
     @SneakyThrows
-    public void read() {
+    void read() {
 
         @Cleanup
         FileChannel channel = FileChannel.open(Paths.get(large_file_path), StandardOpenOption.READ, StandardOpenOption.WRITE);
@@ -163,7 +163,7 @@ public class MappedBufferTest extends Base {
     }
 
     @SneakyThrows
-    public void forceClean(final MappedByteBuffer buffer) {
+    void forceClean(final MappedByteBuffer buffer) {
 
         buffer.force();
         //TODO jdk1.9 sun.misc.Cleaner 已经去掉了 ！！！
@@ -190,7 +190,7 @@ public class MappedBufferTest extends Base {
 
     @Test
     @SneakyThrows
-    public void read2() {
+    void read2() {
 
         int men_map_size = (1 << 20) * (5 << 2);
         RandomAccessFile file = new RandomAccessFile("C:\\Users\\Lenovo\\Desktop\\mapped_buffer.txt", "rw");

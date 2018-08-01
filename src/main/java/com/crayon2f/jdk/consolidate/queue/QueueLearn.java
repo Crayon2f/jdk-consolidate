@@ -1,7 +1,6 @@
 package com.crayon2f.jdk.consolidate.queue;
 
-import lombok.experimental.var;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -9,7 +8,7 @@ import java.util.Queue;
 /**
  * Created by feiFan.gou on 2018/1/6 17:39.
  */
-public class QueueLearn {
+class QueueLearn {
 
     Queue<Integer> queue = new ArrayDeque<Integer>(){{
         add(23);
@@ -19,7 +18,7 @@ public class QueueLearn {
     }};
 
     @Test
-    public void add() {
+    void add() {
 
         System.out.println(queue.peek());
 //        System.out.println(queue.poll());
@@ -27,7 +26,7 @@ public class QueueLearn {
     }
 
     @Test
-    public void get() {
+    void get() {
 
         //poll & peek
         System.out.println(queue.peek()); //单纯的拿到第一个

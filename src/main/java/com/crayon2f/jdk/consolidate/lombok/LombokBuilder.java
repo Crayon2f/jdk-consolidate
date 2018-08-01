@@ -1,4 +1,4 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.Builder;
 import lombok.Singular;
@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Builder(builderClassName = "BuilderInner")
 @ToString
-public class LombokBuilder {
+class LombokBuilder {
 
     private String string;
     @Builder.Default private long id;

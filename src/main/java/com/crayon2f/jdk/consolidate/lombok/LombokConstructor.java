@@ -1,4 +1,4 @@
-package com.crayon2f.jdk.consolidate.pojo.lombok;
+package com.crayon2f.jdk.consolidate.lombok;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,7 @@ import lombok.ToString;
  */
 @RequiredArgsConstructor(staticName = "of")
 @ToString
-public class LombokConstructor {
+class LombokConstructor {
 
 
     // @Data = @Getter + @Setter + @RequiredArgsConstructor + @ToString + @EqualsAndHashCode

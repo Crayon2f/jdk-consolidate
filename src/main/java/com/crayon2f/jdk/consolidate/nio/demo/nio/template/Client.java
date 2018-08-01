@@ -1,6 +1,6 @@
 package com.crayon2f.jdk.consolidate.nio.demo.nio.template;
 
-public class Client {
+class Client {
     private static ClientHandle clientHandle;
 
     public static void start() {

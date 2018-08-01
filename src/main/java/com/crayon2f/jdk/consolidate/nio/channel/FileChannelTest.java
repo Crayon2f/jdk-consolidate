@@ -3,7 +3,7 @@ package com.crayon2f.jdk.consolidate.nio.channel;
 import com.crayon2f.jdk.consolidate.nio.base.Base;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -20,17 +20,17 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * Created by feiFan.gou on 2018/5/8 11:23.
  */
 
-public class FileChannelTest extends Base {
+class FileChannelTest extends Base {
 
-    @Test(timeout = 1000L * 6)
-    public void test() throws InterruptedException {
+    @Test
+    void test() throws InterruptedException {
 
         Thread.sleep(5000);
         System.out.println("=================");
     }
 
     @Test
-    public void byteBuffer() {
+    void byteBuffer() {
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         System.out.println(buffer.position());
         String string = "buffer char short boolean int long float double";
@@ -43,7 +43,7 @@ public class FileChannelTest extends Base {
     }
 
     @Test
-    public void read() {
+    void read() {
 
         File file = new File(file_path);
         try (FileChannel channel = new FileInputStream(file).getChannel()) {
@@ -74,7 +74,7 @@ public class FileChannelTest extends Base {
     }
 
     @Test
-    public void write() {
+    void write() {
 
         File file = new File(file_path_2);
         try (FileChannel channel = new FileOutputStream(file).getChannel()) {
@@ -89,7 +89,7 @@ public class FileChannelTest extends Base {
 
 
     @Test
-    public void copy() {
+    void copy() {
 
         try (FileChannel sourceChannel = new FileInputStream(large_file_path).getChannel();
              FileChannel targetChannel = new FileOutputStream(desktop_dir + File.separator + "temp2.pdf").getChannel()
@@ -106,7 +106,7 @@ public class FileChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void holeFile() {
+    void holeFile() {
 
         File temp = File.createTempFile("hole", null);
         RandomAccessFile file = new RandomAccessFile(temp, "rw");
@@ -123,7 +123,7 @@ public class FileChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void position() {
+    void position() {
 
         RandomAccessFile randomAccessFile = new RandomAccessFile (file_path, "r");
         // Set the file position
@@ -168,7 +168,7 @@ public class FileChannelTest extends Base {
 
     @Test
     @SneakyThrows
-    public void force() {
+    void force() {
 
         FileChannel channel = new FileOutputStream(empty_file_path).getChannel();
 
