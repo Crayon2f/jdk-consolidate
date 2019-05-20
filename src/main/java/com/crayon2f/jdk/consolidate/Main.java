@@ -19,10 +19,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.function.Function;
+import java.util.stream.IntStream;
 
 /**
  * Created by feiFan.gou on 2018/1/6 17:38.
@@ -134,4 +137,18 @@ class Main {
         System.out.println(map);
     }
 
+
+    @Test
+    void test4() {
+
+        List<Integer> list = new ArrayList<>();
+        IntStream.range(0,20).parallel().forEach(i -> {
+            list.add(i);
+            System.out.println("thread-"+Thread.currentThread().getId());
+            System.out.println(i);
+            System.out.println("================");
+        });
+
+        System.out.println(list);
+    }
 }
