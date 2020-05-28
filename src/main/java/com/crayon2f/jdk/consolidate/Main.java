@@ -1,6 +1,7 @@
 package com.crayon2f.jdk.consolidate;
 
 import com.crayon2f.common.pojo.Article;
+import com.crayon2f.jdk.consolidate.annotations.Of;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import lombok.Cleanup;
@@ -150,5 +151,15 @@ class Main {
         });
 
         System.out.println(list);
+    }
+
+    void test5() {
+
+        App app = new App();
+    }
+
+    @Of
+    private class App {
+
     }
 }

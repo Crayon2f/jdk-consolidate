@@ -31,9 +31,9 @@ class ConcurrentSkipListMapTest {
         Map.Entry<String, String> entry = skipListMap.ceilingEntry("f");
 //        System.out.printf("ceiling entry ==> key = %s, value = %s", entry.getKey(), entry.getValue());
         System.out.println();
-        String ceilingValue = skipListMap.ceilingKey("f");
-        System.out.printf("ceiling key ==> { key = %s, value = %s}", "f", ceilingValue);
-        skipListMap.firstEntry();
+        String ceilingValue = skipListMap.floorKey("e");
+        System.out.printf("ceiling key ==> { key = %s, value = %s}", "e", ceilingValue);
+//        skipListMap.firstEntry();
     }
 
     /**
